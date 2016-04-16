@@ -44,6 +44,15 @@ req.post({
     },
     body: data
 }, function(error, response, body) {
-   
+    if (!error) {
+        console.log("Response Code: " + response.statusCode);
+        console.log("Headers:");
+        for (var item in response.headers) {
+            console.log(item + ": " + response.headers[item]);
+        }
+        console.log("Body: " + body);
+    } else {
+        console.log("Got error: " + error.message);
+    }
 }
 );
