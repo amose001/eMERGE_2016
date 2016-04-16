@@ -23,14 +23,16 @@ form {
 }
 
 label {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	color: white;
 	font-size: 8vmin;
 	margin-bottom: 3.5%;
 }
 
 #pswd {
 	box-shadow: 5px 5px 10px #595959;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 	width: 60%;
 	margin: 0 auto;
