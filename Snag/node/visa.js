@@ -3,8 +3,8 @@ var request = require('request');
 var req = request.defaults();
 var sandboxAPI = 'https://sandbox.api.visa.com/visadirect/mvisa/v1/cashinpushpayments';
 var sandboxAPI2 = 'https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransactions';
-var userID = 'UTTPMHS47FFEUSL29GQF21nyX4jXV6hLyCojGskoda56LrKRE';
-var pass = 's0rxBnG5D191MFt1f7Aqx5';
+var userId = 'UTTPMHS47FFEUSL29GQF21nyX4jXV6hLyCojGskoda56LrKRE';
+var password = 's0rxBnG5D191MFt1f7Aqx5';
 
 var data = JSON.stringify({
     "systemsTraceAuditNumber": "451001",
