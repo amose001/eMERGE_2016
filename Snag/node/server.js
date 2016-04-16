@@ -10,7 +10,7 @@ var user_name = "";
 
 app.route('/')
   .get(function(req,res){
-    res.sendfile('index.html');
+    res.sendfile('../index.html');
 });
 
 app.route('/login')
@@ -62,6 +62,24 @@ app.post('/test', function(req,res){
 // app.get('/login', function(req,res){
 //     res.send(user_name);
 // });
+
+app.route('/location')
+    .post(function(req,res){
+    var longitude;
+    var latitude;
+    if (navigator.geolocation) {
+        //alert('2');
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+    function showPosition(position) {
+        longitude = position.coords.longitude;
+        latitude = position.coords.latitude
+        console.log("%s %s", longitude, latitude);
+    }
+
+});
 
 app.listen(3000,function(){
     console.log("Started on PORT 3000");
