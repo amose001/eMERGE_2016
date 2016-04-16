@@ -12,6 +12,13 @@ app.get('/', function(req,res){
     res.send("Hello World");
 });
 
+app.post('/'+user_name+'/sales', function(req,res){
+    var passCode=req.body.passCode;
+    var stock=req.body.stock;
+    var range=req.body.range;
+    var endTime=req.body.endTime;
+});
+
 app.post('/test', function(req,res){
 });
 
@@ -24,6 +31,7 @@ app.post('/login', function(req,res){
         //login failed
     }
     res.redirect(/*redirect to home page*/);
+});
 
 app.get('/',function(req,res){
     res.sendfile('testingpage.html');
@@ -35,4 +43,4 @@ app.get('/login', function(req,res){
 
 app.listen(3000,function(){
     console.log("Started on PORT 3000");
-})
+});
