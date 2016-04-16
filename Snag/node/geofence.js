@@ -13,15 +13,18 @@ var custLong = 25.7776200;
 var user = 'Fried Twinky';
 getCoordinates(radius, user, custLong, custLat);
 
-function getCoordinates(radius,user,custLong,custLat) {
-        var cursor = sales.find(
+function getCoordinates(radius, user, custLong, custLat) {
+    var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
+        var cursor = db.collection('sales').find(
             { name: user },
             { long: 1, lat: 1, _id: 0 }
             );
         if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
+            //print("user is in range");
             console.log("user is in range");
-            return true;
+            //return true;
         };
+    });
 }
 
 function createFence(x,y) {
@@ -50,6 +53,7 @@ function checkLocation(radius, lat1, lat2, lon1, lon2) {
 
     var d = R * c;
     if (d > radius) {
+        //print("user is NOT in range");
         console.log("distance is greater than radius, user not in range");
         return false;
     } else {
