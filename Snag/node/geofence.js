@@ -13,20 +13,6 @@ var custLong = 25.7776200;
 var user = 'Fried Twinky';
 getCoordinates(radius, user, custLong, custLat);
 
-<<<<<<< HEAD
-function getCoordinates(radius,user,custLong,custLat) {
-        var cursor = sales.find(
-            {"name":"Fried Twinky"},
-            { 'long': 1, 'lat': 1, 'id':0}
-            );
-        for (var y in cursor){
-          console.log(y);
-        }
-        if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
-            console.log("user is in range");
-            return true;
-        };
-=======
 function getCoordinates(radius, user, custLong, custLat) {
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
@@ -34,13 +20,13 @@ function getCoordinates(radius, user, custLong, custLat) {
             { long: 1, lat: 1 }
             ).toArray(function(err, items) {
                 //return items;
-                if (checkLocation(radius, custLat, items[0].lat, custLong, items[0].long)) {
+                if (checkLocation(radius, custLat, items.lat, custLong, items.long)) {
                     //print("user is in range");
-                    console.log("user is in range : %s %s", items[0].lat, items[0].long);
+                    console.log("user is in range : %s %s", items.lat, items.long);
                     return true;
                 };
             });
-        
+
         /*
             if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
                 //print("user is in range");
@@ -49,8 +35,6 @@ function getCoordinates(radius, user, custLong, custLat) {
             };
         */
         });
-    
->>>>>>> 3fa49818c460926812cbf05000daaf12e99476b1
 }
 
 function createFence(x,y) {
