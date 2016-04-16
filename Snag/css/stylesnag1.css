@@ -19,6 +19,20 @@
 }
 
 form {
-	padding: 15% 20%;
-	border
+	padding: 13% 20%;
+}
+
+label {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 8vmin;
+	margin-bottom: 3.5%;
+}
+
+#pswd {
+	box-shadow: 5px 5px 10px #595959;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
 }
