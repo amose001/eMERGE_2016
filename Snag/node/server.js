@@ -25,7 +25,7 @@ app.route('/login')
       user_name="";
     }
     res.redirect(/*redirect to home page*/);
-  })
+  });
 
 app.route('/'+user_name+'/sales')
   .post(function(req,res){
