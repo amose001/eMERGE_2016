@@ -11,6 +11,6 @@ function getUserLocation() {
         
         longitude = position.coords.longitude;
         latitude = position.coords.latitude
-        console.log("%s" "%s", longitude,latitude);
+        console.log("%s %s", longitude,latitude);
     }
 }
