@@ -31,16 +31,21 @@ class Snag extends Component {
 }
 
 const styles = StyleSheet.create({
+  // Colors to use
+  // #232d3b
+  // #45A39E
+  // #ff742c
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ff742c',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: '#232d3b'
   },
   instructions: {
     textAlign: 'center',
