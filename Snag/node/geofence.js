@@ -7,8 +7,10 @@ var gMapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDl33a_Or3jDJukn
 
 function getCoordinates(user) {
     var findCoordinates = function (db, callback) {
-        var cursor = db.collection(user).find();
-
+        var cursor = db.collection('sales').find(
+            { name: user },
+            { long: 1, lat: 1, _id: 0 }
+            );
     }
 }
 
