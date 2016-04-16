@@ -28,7 +28,8 @@ function createFence(x,y) {
         mapOptions);
 }
 
-function checkLocation(radius,lat1,lat2,lon1,lon2) {
+function checkLocation(radius, lat1, lat2, lon1, lon2) {
+    radius = radius * 1.60934;
     var R = 6371000; // metres
     var l1 = lat1.toRadians();
     var l2 = lat2.toRadians();
