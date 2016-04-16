@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   // #232d3b
   // #45A39E
   // #ff742c
+  // font: 
   container: {
     flex: 1,
     justifyContent: 'center',
