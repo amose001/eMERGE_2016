@@ -16,10 +16,12 @@ app.post('/login', function(req,res){
     var user_name=req.body.user;
     var password=req.body.password;
     res.redirect(/*redirect to home page*/);
+app.get('/',function(req,res){
+    res.sendfile('testingpage.html');
 });
 
 app.get('/login', function(req,res){
-    
+
 });
 
 app.listen(3000,function(){
