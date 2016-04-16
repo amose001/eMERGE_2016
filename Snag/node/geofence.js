@@ -8,8 +8,8 @@ var dbhandler = require("./dbhandler.js");
 
 //test data
 var radius = 2;
-var custLat = 180.1909090;
-var custLong = 125.7776200;
+var custLat = 25.7776200;
+var custLong = -80.1909090;
 var user = 'Fried Twinky';
 getCoordinates(radius, user, custLong, custLat);
 
@@ -26,7 +26,7 @@ function getCoordinates(radius, user, custLong, custLat) {
                     return true;
                 };
             });
-        
+
         /*
             if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
                 //print("user is in range");
@@ -35,7 +35,7 @@ function getCoordinates(radius, user, custLong, custLat) {
             };
         */
         });
-    
+
 }
 
 function createFence(x,y) {
