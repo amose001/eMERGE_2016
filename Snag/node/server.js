@@ -1,23 +1,29 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
-//app.route('/test')
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-//  .get(function(req,res) {
-      //send data to front end
-//  })
+app.get('/', function(req,res){
+    res.send("Hello World");
+});
 
-//  .post(function(req, res) {
-//      res.redirect('http://localhost:8100/')
-//  });
+app.post('/test', function(req,res){
+});
 
-//app.listen(9000);
-//console.log('Serving on port 9000');
+app.post('/login', function(req,res){
+    var user_name=req.body.user;
+    var password=req.body.password;
+    res.redirect(/*redirect to home page*/);
 app.get('/',function(req,res){
     res.sendfile('testingpage.html');
 });
-app.post('/test',function(req,res){
+
+app.get('/login', function(req,res){
+
 });
+
 app.listen(3000,function(){
     console.log("Started on PORT 3000");
 })
