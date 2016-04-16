@@ -13,6 +13,19 @@
 <link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href="css/stylepost1.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+function check(){
+	//alert("1");
+	var checkb = document.getElementById('Yes');
+	if(checkb.checked){
+	//alert("2");
+		document.getElementById("appear").style.display='block';
+	}else{
+	alert("3");
+		document.getElementById("appear").style.display='none';
+	}
+}
+</script>
 </head>
 <body>
 <div class="content">
@@ -41,13 +54,13 @@
       
 			<div id= "limit" class="radio-btns">
 					<div class="swit">								
-						<div id="Yes" class="check_box_one"> <div class="radio1"> <label><input type="radio" name="radio1" checked=""><i></i>Yes</label> </div></div>
+						<div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
                         <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>  
 						<div class="clear"></div>
                      
                       <!-- this appears when yes is fileld -->
                         <br/>
-                        <input id="appear" type="text" value="Enter the number of buyers here " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
+                        <input id="appear" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
                          
 					</div>
                     
