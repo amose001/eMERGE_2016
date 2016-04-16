@@ -4,14 +4,24 @@ var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://localhost:27017/test';
 var gMapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDl33a_Or3jDJukn6_Kr8KQjqKOInEyzoM&callback=initMap"
+var dbhandler = require("./dbhandler.js");
 
-function getCoordinates(user) {
-    var findCoordinates = function (db, callback) {
-        var cursor = db.collection('sales').find(
+//test data
+var radius = 2;
+var custLat = -80.1909090;
+var custLong = 25.7776200;
+var user = 'Fried Twinky';
+getCoordinates(radius, user, custLong, custLat);
+
+function getCoordinates(radius,user,custLong,custLat) {
+        var cursor = sales.find(
             { name: user },
             { long: 1, lat: 1, _id: 0 }
             );
-    }
+        if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
+            console.log("user is in range");
+            return true;
+        };
 }
 
 function createFence(x,y) {
@@ -25,7 +35,8 @@ function createFence(x,y) {
         mapOptions);
 }
 
-function checkLocation(radius,lat1,lat2,lon1,lon2) {
+function checkLocation(radius, lat1, lat2, lon1, lon2) {
+    radius = radius * 1.60934;
     var R = 6371000; // metres
     var l1 = lat1.toRadians();
     var l2 = lat2.toRadians();
@@ -39,6 +50,7 @@ function checkLocation(radius,lat1,lat2,lon1,lon2) {
 
     var d = R * c;
     if (d > radius) {
+        console.log("distance is greater than radius, user not in range");
         return false;
     } else {
         return true;
