@@ -1,5 +1,5 @@
 
-/* reset */
+/* HERE WE GO BROOOO*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0;padding:0;}
@@ -101,7 +101,7 @@ img{max-width:100%;}
   letter-spacing:1px;
 }
 /* Account Button */
-#loginButton { 
+#AccountButton { 
     display:inline-block;  
     position:relative;
     z-index:30;
@@ -131,42 +131,9 @@ fieldset#body {
 	text-shadow: 1px 1px #000;
     font-weight:500;
 }
-/* Default Input */
-#loginForm input[type="text"],#loginForm input[type="password"]{
-    width:92%;
-    border:1px solid #DADADA;
-	color: #222;
-	background:#FFF;
-    padding:3px 8px;
-    font-size:0.85em;
-    -webkit-apperance:none;
-    font-family: 'Open Sans', sans-serif;
-}
-/* Sign In Button */
-#loginForm #login{
-    width:auto;
-    font-family: 'Open Sans', sans-serif;
-    float:left;
-    background:#7ACCC8;
-    border-width:0 0 3px 0;
-    border-style:solid;
-    border-color:#45A39E;
-    color:#fff;
-    font-size:0.85em;
-    padding:8px 20px;
-    box-shadow:none;
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
-    -webkit-appearance:none;
-    margin:0 12px 0 0;
-    cursor:pointer;
-    *padding:7px 2px 8px 2px; /* IE7 Fix */
-    transition: all .5s;
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-o-transition: all .5s;
-	-moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px;
-}
+
+
+
 #loginForm #login:hover {
 	background:#60C2BD;
 }
@@ -214,3 +181,4 @@ fieldset#body {
 }
 .dropdown-buttons{
   margin:2em 0 1em 0;
+}
