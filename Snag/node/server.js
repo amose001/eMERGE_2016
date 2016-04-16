@@ -14,7 +14,7 @@ var app = express();
 //app.listen(9000);
 //console.log('Serving on port 9000');
 app.get('/',function(req,res){
-    res.send("Hello World");
+    res.sendfile('testingpage.html');
 });
 app.post('/test',function(req,res){
 });
