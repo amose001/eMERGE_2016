@@ -4,9 +4,30 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="visa.js"></script>
+    <script src="../js/geoLocation.js"></script>
+    <script type="text/javascript">
+        // JavaScript source code
+        var longitude;
+        var latitude;
+        //getUserLocation();
+        function getUserLocation() {
+            //alert('1');
+            if (navigator.geolocation) {
+                //alert('2');
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+            function showPosition(position) {
+                longitude = position.coords.longitude;
+                latitude = position.coords.latitude
+                console.log("%s %s", longitude, latitude);
+            }
+        }
+    </script>
 </head>
 <body>
-    <input type="button" id="btn1" onclick=buy() value="Visa buy test">
+    <input type="button" id="btn1" onclick=getUserLocation() value="get geolocation test">
 </body>
 </html>
+
