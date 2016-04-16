@@ -23,6 +23,22 @@ function createFence(x,y) {
         mapOptions);
 }
 
-function checkLocation() {
+function checkLocation(radius,lat1,lat2) {
+    var R = 6371000; // metres
+    var l1 = lat1.toRadians();
+    var l2 = lat2.toRadians();
+    var dl = (lat2 - lat1).toRadians();
+    var de = (lon2 - lon1).toRadians();
 
+    var a = Math.sin(dl / 2) * Math.sin(dl / 2) +
+            Math.cos(l1) * Math.cos(l2) *
+            Math.sin(de / 2) * Math.sin(de / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    var d = R * c;
+    if (d > radius) {
+        return false;
+    } else {
+        return true;
+    }
 }
