@@ -6,6 +6,13 @@ var url = 'mongodb://localhost:27017/test';
 var gMapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDl33a_Or3jDJukn6_Kr8KQjqKOInEyzoM&callback=initMap"
 var dbhandler = require("./dbhandler.js");
 
+//test data
+var radius = 2;
+var custLat = -80.1909090;
+var custLong = 25.7776200;
+var user = 'Fried Twinky';
+getCoordinates(radius, user, custLong, custLat);
+
 function getCoordinates(radius,user,custLong,custLat) {
         var cursor = sales.find(
             { name: user },

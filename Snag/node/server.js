@@ -24,6 +24,7 @@ app.post('/login', function(req,res){
         //login failed
     }
     res.redirect(/*redirect to home page*/);
+}
 
 app.get('/',function(req,res){
     res.sendfile('testingpage.html');
