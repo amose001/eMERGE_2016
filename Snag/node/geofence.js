@@ -34,9 +34,9 @@ function getCoordinates(radius, user, custLong, custLat) {
             { long: 1, lat: 1 }
             ).toArray(function(err, items) {
                 //return items;
-                if (checkLocation(radius, custLat, items.lat, custLong, items.long)) {
+                if (checkLocation(radius, custLat, items[0].lat, custLong, items[0].long)) {
                     //print("user is in range");
-                    console.log("user is in range : %s %s", items.lat, items.long);
+                    console.log("user is in range : %s %s", items[0].lat, items[0].long);
                     return true;
                 };
             });
