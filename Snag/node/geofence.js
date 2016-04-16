@@ -27,10 +27,6 @@ function getCoordinates(radius, user, custLong, custLat) {
                 };
             });
         
-        console.log(cursor);
-        for (var x in cursor) {
-            console.log(x);
-        }
         /*
             if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
                 //print("user is in range");
