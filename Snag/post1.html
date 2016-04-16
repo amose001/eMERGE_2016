@@ -18,16 +18,16 @@
   <div class="content">
     <h1>Post Your Promotion</h1>
     <div class="main">
-      <form>
+      <form action="/sales" method="post">
         <h5>Enter a code word</h5>
-        <input type="text" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+        <input type="text" name="codeword" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
         <h5>Enter a headline for your deal</h5>
-        <input type="text" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
+        <input type="text" name="headline" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
         <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
-        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+        <textarea onfocus="this.value = '';" name="info" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 
         <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-        <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+        <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
 
 
         <h5>Birthday (date and time):</h5>
@@ -48,7 +48,7 @@
 
             <!-- this appears when yes is fileld -->
             <br/>
-            <input id="appear" type="text" value="Enter the number of buyers here " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
+            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
 
           </div>
 
@@ -71,7 +71,7 @@
 
 
         <h5>availabe for...... yea..... </h5>
-        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" >Type here</textarea>
         <input type="submit" value="Post my Promo">
       </form>
     </div>

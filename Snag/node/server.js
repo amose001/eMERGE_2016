@@ -10,7 +10,7 @@ var user_name = "";
 
 app.route('/')
   .get(function(req,res){
-    res.sendfile('testingpage.html');
+    res.sendfile('index.html');
 });
 
 app.route('/login')
@@ -28,12 +28,14 @@ app.route('/login')
 
 });
 
-app.route('/'+user_name+'/sales')
+app.route('/sales')
   .post(function(req,res){
-    var passCode=req.body.passCode;
-    var stock=req.body.stock;
+    var codeword=req.body.codeword;
+    var headline=req.body.headline;
+    var info=req.body.info;
     var range=req.body.range;
-    var endTime=req.body.endTime;
+    var datetime=req.body.datetime;
+    var stock=req.body.stock;
 });
 
 // app.post('/'+user_name+'/sales', function(req,res){
