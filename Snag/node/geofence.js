@@ -8,8 +8,8 @@ var dbhandler = require("./dbhandler.js");
 
 //test data
 var radius = 2;
-var custLat = -80.1909090;
-var custLong = 25.7776200;
+var custLat = 180.1909090;
+var custLong = 125.7776200;
 var user = 'Fried Twinky';
 getCoordinates(radius, user, custLong, custLat);
 
@@ -26,7 +26,7 @@ function getCoordinates(radius, user, custLong, custLat) {
                     return true;
                 };
             });
-
+        
         /*
             if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
                 //print("user is in range");
@@ -35,6 +35,7 @@ function getCoordinates(radius, user, custLong, custLat) {
             };
         */
         });
+    
 }
 
 function createFence(x,y) {
@@ -51,10 +52,10 @@ function createFence(x,y) {
 function checkLocation(radius, lat1, lat2, lon1, lon2) {
     radius = radius * 1.60934;
     var R = 6371000; // metres
-    var l1 = lat1.toRadians();
-    var l2 = lat2.toRadians();
-    var dl = (lat2 - lat1).toRadians();
-    var de = (lon2 - lon1).toRadians();
+    var l1 = lat1 * 0.0174533;
+    var l2 = lat2 * .0174533;
+    var dl = (lat2 - lat1) * 0.0174533;
+    var de = (lon2 - lon1) * 0.0174533;
 
     var a = Math.sin(dl / 2) * Math.sin(dl / 2) +
             Math.cos(l1) * Math.cos(l2) *
@@ -63,6 +64,7 @@ function checkLocation(radius, lat1, lat2, lon1, lon2) {
 
     var d = R * c;
     if (d > radius) {
+        //print("user is NOT in range");
         console.log("distance is greater than radius, user not in range");
         return false;
     } else {
