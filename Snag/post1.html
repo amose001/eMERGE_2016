@@ -37,16 +37,17 @@
        
 		
 		<h5>Do you want to limit the amounf of buyers?</h5>
-			<div class="radio-btns">
-					<div class="swit">								
-						<div class="check_box_one"> <div class="radio1"> <label><input type="radio" name="radio1" checked=""><i></i>Yes</label> </div></div>
-                        <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
-                        
       
+      
+			<div id= "limit" class="radio-btns">
+					<div class="swit">								
+						<div id="Yes" class="check_box_one"> <div class="radio1"> <label><input type="radio" name="radio1" checked=""><i></i>Yes</label> </div></div>
+                        <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>  
 						<div class="clear"></div>
+                     
                       <!-- this appears when yes is fileld -->
                         <br/>
-                        <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+                        <input id="appear" type="text" value="Enter the number of buyers here " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
                          
 					</div>
                     
