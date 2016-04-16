@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 body{
 	padding:0;
 	margin:0;
@@ -2288,3 +2283,21 @@ button#focus-single,button#focus-multiple,button#focus-coords,button#focus-init 
 		margin: 0 6px;
 	}
 }
+
+
+
+.navbar {
+	background-color: #232D3B;
+	border-bottom: 8px solid #EE5F15;
+	height: 11.5vh;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+#logo {
+	position: absolute;
+	left: 49%;
+	margin-left: -50px !important;  /* 50% of your logo width */
+	display: inline-block;
+}
+
