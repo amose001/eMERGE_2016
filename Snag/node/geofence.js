@@ -17,14 +17,27 @@ function getCoordinates(radius, user, custLong, custLat) {
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
             { name: user },
-            { long: 1, lat: 1}
-            );
+            { long: 1, lat: 1 }
+            ).toArray(function(err, items) {
+                //return items;
+                if (checkLocation(radius, custLat, items.lat, custLong, items.long)) {
+                    //print("user is in range");
+                    console.log("user is in range : %s %s", items.lat, items.long);
+                    return true;
+                };
+            });
         
+        console.log(cursor);
+        for (var x in cursor) {
+            console.log(x);
+        }
+        /*
             if (checkLocation(radius, custLat, cursor.lat, custLong, cursor.long)) {
-                print("user is in range");
+                //print("user is in range");
                 console.log("user is in range : %s %s", cursor.lat, cursor.long);
                 return true;
             };
+        */
         });
     
 }
