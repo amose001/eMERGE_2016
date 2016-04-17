@@ -80,10 +80,16 @@ app.route('/location')
         */
         console.log("swag "+results);
         if (results != "") {
-            res.redirect('/snag2.html')
+            res.redirect('/snag2.html');
+        } else {
+            res.redirect('/Error.html')
         }
     }
 );
+app.route('/createAccount')
+    .post(function (req, res) {
+        res.redirect('/createAccount.html')
+    })
 
 app.route('/snag2_3')
     .post(function (req, res) {
