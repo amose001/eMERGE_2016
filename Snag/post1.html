@@ -56,7 +56,7 @@ function check(){
         //alert(latitudes);
         console.log("%s %s", longitudes, latitudes);
     }
-  }
+  
   </script>
   <script type="text/javascript">
   // JavaScript source code
@@ -66,26 +66,26 @@ function check(){
   var latitudes;
   function getCoordinates() {
 
-    //getUserLocation();
-    eLon = document.getElementById("longitude");
-    eLat = document.getElementById("latitude");
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition, onError);
-     // alert('2');
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-  function showPosition(position) {
-    //alert("got here");
-    longitudes = position.coords.longitude;
-    latitudes = position.coords.latitude;
-    eLon.value = longitudes;
-    eLat.value = latitudes;
-    //alert(longitudes);
-    //alert(latitudes);
-    console.log("%s %s", longitudes, latitudes);
+      //getUserLocation();
+      eLon = document.getElementById("longitude");
+      eLat = document.getElementById("latitude");
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, onError);
+          // alert('2');
+      } else {
+          console.log("Geolocation is not supported by this browser.");
+      }
+      function showPosition(position) {
+          //alert("got here");
+          longitudes = position.coords.longitude;
+          latitudes = position.coords.latitude;
+          eLon.value = longitudes;
+          eLat.value = latitudes;
+          //alert(longitudes);
+          //alert(latitudes);
+          console.log("%s %s", longitudes, latitudes);
+      }
   }
-
   function onError(error) {
     // alert("wait 1");
     alert('code: ' + error.code + '\n' +
@@ -178,7 +178,7 @@ function check(){
 
             <!-- this appears when yes is fileld -->
             <br/>
-            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
+            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onclick="check()" onfocus="    this.value = '';" onblur="    if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
 
           </div>
 
