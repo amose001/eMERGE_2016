@@ -1,7 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
 
-var testdata = {'name':'Fried Twinky', 'long':'-80.1909090', 'lat':'25.7776200', 'endTime':'2016-04-17 10:30:00'};
-
 exports.newUser = function(name, password){
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var sales = db.collection('sales');
