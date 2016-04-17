@@ -11,16 +11,16 @@ var radius = 2;
 var custLat = 25.7776200;
 var custLong = -80.1909090;
 var user = 'Fried Twinky';
-getCoordinates(radius, user, custLong, custLat);
+//getCoordinates(radius, user, custLong, custLat);
 
-function getCoordinates(radius, user, custLong, custLat) {
+exports.getCoords = function getCoordinates(user, custLong, custLat) {
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
-            { name: user },
-            { long: 1, lat: 1 }
+            { codework: user },
+            { long: 1, lat: 1 , range:1}
             ).toArray(function(err, items) {
                 //return items;
-                if (checkLocation(radius, custLat, items[0].lat, custLong, items[0].long)) {
+                if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {
                     //print("user is in range");
                     console.log("user is in range : %s %s", items[0].lat, items[0].long);
                     return true;

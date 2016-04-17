@@ -7,8 +7,58 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200|Josefin+Sans|Quicksand' rel='stylesheet' type='text/css'>
 	<!-- Local CSS -->
 	<link href="css/stylesnag1.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+
+        // JavaScript source code
+        var eLon;
+        var eLat;
+        var longitudes;
+        var latitudes;
+        function getCoordinates() {
+
+            //getUserLocation();
+             eLon = document.getElementById("longitude");
+             eLat = document.getElementById("latitude");
+            if (navigator.geolocation) {
+                //alert('2');
+                navigator.geolocation.getCurrentPosition(showPosition, onError);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            //alert("got here");
+            longitudes = position.coords.longitude;
+            latitudes = position.coords.latitude;
+          // eLon.value = longitudes;
+           // eLat.value = latitudes;
+            //alert(longitudes);
+            //alert(latitudes);
+            console.log("%s %s", longitudes, latitudes);
+        }
+
+        function onError(error) {
+            // alert("wait 1");
+            alert('code: ' + error.code + '\n' +
+                  'message: ' + error.message + '\n');
+            //alert("wait");
+        }
+
+    </script>
+    <script type="text/javascript">
+    function hideInputs() {
+        var eLon = document.getElementById("longitude");
+        var eLat = document.getElementById("latitude");
+        eLon.style.display = "none";
+        eLat.style.display = "none";
+        getCoordinates();
+    }
+
+    </script>
+
 </head>
-<body>
+<body onload="hideInputs()">
 	<!-- Navbar (fixed at top of page -->
 	<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
@@ -25,9 +75,15 @@
 				<form action="" method="post">
 					<div class="form-group">
 						<label for="code">Enter Code & Snag</label>
-						<input type="email" class="form-control" id="pswd" placeholder="KeyCode" required>
+						<input type="text" class="form-control" name="bob" id="pswd" placeholder="KeyCode" required>
 					</div>
-					<button type="submit" class="btn">Claim Code</button>
+
+                    <div id="coolerthings">
+                        <input id="longitude" name="long2" display="" value="" />
+                        <input id="latitude" name="lat2" display="" value="" />
+                    </div>
+
+					<button type="submit" name="location" class="btn">Claim Code</button>
 				</form>
 			</div>
 		</div>
