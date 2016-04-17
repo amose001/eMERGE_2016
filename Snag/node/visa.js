@@ -74,7 +74,7 @@ var data = JSON.stringify({
 })
 
 
-//function buy() {
+exports.visaBuy = function buy() {
     req.post({
         uri: sandboxAPI2,
         key: fs.readFileSync(keyFile),
@@ -98,4 +98,4 @@ var data = JSON.stringify({
         }
     }
     );
-//}
+}

@@ -4,8 +4,8 @@ exports.newUser = function(name, password){
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var sales = db.collection('sales');
 
-          db.createUser({ user:"\""+name+"\"",
-            pwd: "\""+password+"\"",
+          db.createUser({ user: name,
+            pwd: password,
             roles: []
         });
     });
