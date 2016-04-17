@@ -28,12 +28,15 @@ function check(){
 </script>
 <script type="text/javascript">
     // JavaScript source code
+    var eLon;
+    var eLat;
+    var longitudes;
+    var latitudes;
     function getCoordinates() {
-        var longitudes;
-        var latitudes;
+        
         //getUserLocation();
-        var eLon = document.getElementById("longitude");
-        var eLat = document.getElementById("latitude");
+        eLon = document.getElementById("longitude");
+        eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
             alert('2');
             navigator.geolocation.getCurrentPosition(showPosition, onError);
@@ -54,6 +57,7 @@ function check(){
     }
 
     function onError(error) {
+        alert("wait 1");
         alert('code: ' + error.code + '\n' +
               'message: ' + error.message + '\n');
         alert("wait");
