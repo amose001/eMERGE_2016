@@ -30,6 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
   <div class="header" id="home">
+<!-- <<<<<<< HEAD
   	  <div class="header_top">
 	   <div class="wrap">
 		 	     <div class="logo">
@@ -55,123 +56,149 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						                                <label for="password">Password</label>
 						                                <input type="password" name="password" value="">
 						                            </fieldset>
+======= -->
+    <div class="header_top">
+      <div class="wrap">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="current"><a href="#section-1" class="scroll"> </a></li>
+            <li><a href="#section-2" class="scroll"></a></li>
+            <li><a href="#section-3" class="scroll"></a></li>
+            <li><a href="#section-4" class="scroll"></a></li>
+            <li class="login" >
+              <div id="loginContainer"><a href="#" id="loginButton"><span> + Login</span></a>
+                <div id="loginBox">
+                  <form id="loginForm" action="/login" method="POST">
+                    <fieldset id="body">
 
-						                            <input type="submit" id="login" value="Login">
+                      <fieldset>
+                        <label for="email">Email Address</label>
+                        <input type="text" name="user" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" value="">
+                      </fieldset>
 
-						                        </fieldset>
+                      <input type="submit" id="login" value="Login">
 
-						                    </form>
-						                </div>
-				                  </div>
-						      </li>
-                  <li class="login">
-                    <div id="loginContainer"><a href="#" id="loginButton"><span> + Sign Up</span></a>
-                      <div id="loginBox">
-                        <form id="loginForm">
-                          <fieldset id="body">
-                            <fieldset>
-                              <label for="email">User Name</label>
-                              <input type="text" value="">
-                            </fieldset>
-                            <fieldset>
-                              <label for="email">Email Address</label>
-                              <input type="text" value="">
-                            </fieldset>
-                            <fieldset>
-                              <label for="password">Password</label>
-                              <input type="password" value="">
-                            </fieldset>
-                            <fieldset>
-                              <label for="password">Confirm Password</label>
-                              <input type="password" value="">
-                            </fieldset>
-                            <input type="submit" id="login" value="Sign Up">
-                            <label for="checkbox"><input type="checkbox"> <i>T & C apply</i></label>
-                          </fieldset>
-                          <span><a href="#">Already do u have an account ?</a></span>
-                        </form>
-                      </div>
-                    </div>
-                  </li>
-								<div class="clear"></div>
-							</ul>
-						</div>
-	    		 <div class="clear"></div>
+                    </fieldset>
+
+                  </form>
+                </div>
+              </div>
+            </li>
+            <li class="login">
+              <div id="loginContainer"><a href="#" id="loginButton"><span> + Sign Up</span></a>
+                <div id="loginBox">
+                  <form id="loginForm">
+                    <fieldset id="body">
+                      <fieldset>
+                        <label for="email">User Name</label>
+                        <input type="text" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="email">Email Address</label>
+                        <input type="text" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="password">Password</label>
+                        <input type="password" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="password">Confirm Password</label>
+                        <input type="password" value="">
+                      </fieldset>
+                      <input type="submit" id="login" value="Sign Up">
+                      <label for="checkbox"><input type="checkbox"> <i>T & C apply</i></label>
+                    </fieldset>
+                    <span><a href="#">Already do u have an account ?</a></span>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <div class="clear"></div>
+          </ul>
         </div>
         <div class="clear"></div>
       </div>
+      <div class="clear"></div>
     </div>
   </div>
-  <div class="main" id="container">
-    <div class="content">
-      <div class="content_top section" id="section-1">
-        <div class="wrap">
-          <div class="banner_desc">
-            <div class="wmuSlider example1">
-              <div class="wmuSliderWrapper">
-                <article><p>Snag any promotion or deal in real time</p> <img src="images/clouds.png"  alt="" /> </article>
-                <article><p>Accept your rewards and purchases by the click of a button</p> <img src="images/system.png"  alt="" /> </article>
-                <article><p>Give your customers the rewards they deserve</p> <img src="images/slider-img3.png"  alt="" /> </article>
-                <article><p>Keep track of your sales based on region, time, and availability</p> <img src="images/slider-img4.png"  alt="" /> </article>
-              </div>
+</div>
+<div class="main" id="container">
+  <div class="content">
+    <div class="content_top section" id="section-1">
+      <div class="wrap">
+        <div class="banner_desc">
+          <div class="wmuSlider example1">
+            <div class="wmuSliderWrapper">
+              <article><p>Snag any promotion or deal in real time</p> <img src="images/clouds.png"  alt="" /> </article>
+              <article><p>Accept your rewards and purchases by the click of a button</p> <img src="images/system.png"  alt="" /> </article>
+              <article><p>Give your customers the rewards they deserve</p> <img src="images/slider-img3.png"  alt="" /> </article>
+              <article><p>Keep track of your sales based on region, time, and availability</p> <img src="images/slider-img4.png"  alt="" /> </article>
             </div>
-            <script src="js/jquery.wmuSlider.js"></script>
-            <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
-            <script>
-            $('.example1').wmuSlider();
-            </script>
-            <div class="dropdown-buttons">
-              <div class="dropdown-button">
-                <a href="./snag1.html" class="test">SNAG</a>
-                <a href="./post.html" class="test">POST</a>
-              </div>
-            </div>
-            <div class="quote_button">
-            </li>
-
           </div>
+          <script src="js/jquery.wmuSlider.js"></script>
+          <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+          <script>
+          $('.example1').wmuSlider();
+          </script>
+          <div class="dropdown-buttons">
+            <div class="dropdown-button">
+              <a href="./snag1.html" class="test">SNAG</a>
+              <a href="./post.html" class="test">POST</a>
+            </div>
+          </div>
+          <div class="quote_button">
+          </li>
+
         </div>
       </div>
-
     </div>
+
   </div>
+</div>
 
-  <div class="about_desc section" id="section-2">
-    <div class="wrap">
-      <div class="section group example"> </div>
-    </div>
+<div class="about_desc section" id="section-2">
+  <div class="wrap">
+    <div class="section group example"> </div>
   </div>
+</div>
 
-  <div class="features section" id="section-3">
-    <!-- Slider -->
-    <div class="browser">
-      <div id="mySliderTabsContainer"> </div>
-    </div>
-    <link rel="stylesheet" href="css/jquery.sliderTabs.min.css">
-    <script src="js/jquery.sliderTabs.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      var tabs = $("div#mySliderTabs").sliderTabs({
-        autoplay:5000,
-        indicators: true,
-        panelArrows: true,
-        panelArrowsShowOnHover: true
-      });
-      /*      $("#mySliderTabsContainer").resizable({
-      maxHeight: 200,
-      minHeight: 200,
-      maxWidth: 605
+<div class="features section" id="section-3">
+  <!-- Slider -->
+  <div class="browser">
+    <div id="mySliderTabsContainer"> </div>
+  </div>
+  <link rel="stylesheet" href="css/jquery.sliderTabs.min.css">
+  <script src="js/jquery.sliderTabs.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var tabs = $("div#mySliderTabs").sliderTabs({
+      autoplay:5000,
+      indicators: true,
+      panelArrows: true,
+      panelArrowsShowOnHover: true
     });
-    */
-    prettyPrint();
+    /*      $("#mySliderTabsContainer").resizable({
+    maxHeight: 200,
+    minHeight: 200,
+    maxWidth: 605
   });
+  */
+  prettyPrint();
+});
 
-  $(document).delegate(".nav-list li a", "click", function(){
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent().addClass("active");
-  });
-  </script>
-  <!--End Slider -->
+$(document).delegate(".nav-list li a", "click", function(){
+  $(this).parent().siblings().removeClass("active");
+  $(this).parent().addClass("active");
+});
+</script>
+<!--End Slider -->
 </div>
 </div>
 </div>
