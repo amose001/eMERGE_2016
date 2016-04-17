@@ -16,16 +16,18 @@ exports.getCoords = function getCoordinates(user, custLong, custLat) {
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
             { codeword: user },
-            { long: 1, lat: 1 , range:1, endTime:1, name:1}
+            { long: 1, lat: 1 , range:1}
             ).toArray(function(err, items) {
                 //return items;
-                //if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {
+                if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {
                     //print("user is in range");
                     console.log("user is in range : %s %s", items[0].lat, items[0].long);
                     console.log(items[0].endTime + ", "+items[0].name);
                     output = items[0].endTime + ", "+items[0].name;
                     exports.iteminfo = output;
                 //};
+                    return true;
+                };
             });
 
         /*
@@ -37,17 +39,6 @@ exports.getCoords = function getCoordinates(user, custLong, custLat) {
         */
         });
 
-}
-
-function createFence(x,y) {
-    var myLatlng = new google.maps.LatLng(x,y);
-    var mapOptions = {
-        zoom: 8,
-        center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"),
-        mapOptions);
 }
 
 function checkLocation(radius, lat1, lat2, lon1, lon2) {
