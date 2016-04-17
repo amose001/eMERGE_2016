@@ -8,7 +8,7 @@ var geofence = require("./geofence.js");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../')));
-
+var results = "";
 var user_name = "";
 
 app.route('/')
@@ -64,7 +64,8 @@ app.route('/sales')
     res.redirect('/post2.html');
 });
 
-app.post('/test', function(req,res){
+app.get('/time', function(req,res){
+    res.send(results);
 });
 
 app.route('/location')
@@ -72,8 +73,12 @@ app.route('/location')
         var Lo = req.body.long2;
         var La = req.body.lat2;
         var code = req.body.bob;
-        var results = geofence.getCoords(code, Lo, La);
-        if (results) {
+        results = geofence.getCoords(code, Lo, La);
+        /*
+        Async too dank 4 me
+        */
+        console.log("swag "+results);
+        if (results != "") {
             res.redirect('/snag2.html')
         }
     }

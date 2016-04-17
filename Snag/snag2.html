@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="snag2app">
 <head>
 	<title>Snag - Deal Select</title>
 	<!-- For-Mobile-Apps -->
@@ -8,10 +8,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200|Josefin+Sans|Quicksand' rel='stylesheet' type='text/css'>
 
 
-	<!-- Style --> 
+	<!-- Style -->
 	<link href="css/stylesnag2.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body ng-controller="snag2controller">
 	<!-- Navbar (fixed at top of page -->
 	<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
@@ -22,7 +22,7 @@
 	</nav>
 	<div class="container-fluid" id="main">
 		<div class="row text-center">
-			<h1>Snag The Deal</h1>
+			<h1>Snag The Deal {{productname}}</h1>
 		</div>
 		<div class="row text-center">
 			<div id="clockdiv">
@@ -33,8 +33,23 @@
 			</div>
 		</div>
 			<button type="submit" name="purch">Purchase Now</button>
-	</div>		 				  
+	</div>
 	<!--TIMER -->
 	<script src="js/countdown.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script>
+        var app = angular.module("snag2app", []);
+        app.controller("snag2controller", ["$scope", "$http", function($scope, $http) {
+            $http.get("/time")
+    		.then(function(response){
+    		    var stuff = response.data;
+						console.log(stuff);
+						var res = stuff.split(",");
+						$scope.time = res[0];
+						$scope.productname = res[1];
+    		});
+				}])
+    </script>
 </body>
 </html>

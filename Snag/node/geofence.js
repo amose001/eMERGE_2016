@@ -8,23 +8,21 @@ var dbhandler = require("./dbhandler.js");
 
 //test data
 var radius = 2;
-var custLat = 25.7776200;
-var custLong = -80.1909090;
-var user = 'Fried Twinky';
 //getCoordinates(radius, user, custLong, custLat);
 
 exports.getCoords = function getCoordinates(user, custLong, custLat) {
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
-            { codework: user },
-            { long: 1, lat: 1 , range:1}
+            { codeword: user },
+            { long: 1, lat: 1 , range:1, endTime:1, name:1}
             ).toArray(function(err, items) {
                 //return items;
-                if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {
+                //if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {
                     //print("user is in range");
                     console.log("user is in range : %s %s", items[0].lat, items[0].long);
-                    return true;
-                };
+                    console.log(items[0].endTime + ", "+items[0].name);
+                    return items[0].endTime + ", "+items[0].name;
+                //};
             });
 
         /*
