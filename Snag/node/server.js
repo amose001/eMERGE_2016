@@ -2,15 +2,17 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var dbhandler = require("./dbhandler.js");
+var path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '')));
 
 var user_name = "";
 
 app.route('/')
   .get(function(req,res){
-    res.sendfile('../index.html');
+    res.sendFile('index.html', { root: "../"});
 });
 
 app.route('/login')
