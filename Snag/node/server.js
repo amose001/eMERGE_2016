@@ -10,7 +10,7 @@ var user_name = "";
 
 app.route('/')
   .get(function(req,res){
-    res.sendfile('index.html');
+    res.sendfile('../index.html');
 });
 
 app.route('/login')

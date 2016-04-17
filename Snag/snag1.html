@@ -27,7 +27,7 @@
 						<label for="code">Enter Code & Snag</label>
 						<input type="email" class="form-control" id="pswd" placeholder="KeyCode" required>
 					</div>
-					<button type="submit" class="btn btn-primary">Claim Code</button>
+					<button type="submit" class="btn">Claim Code</button>
 				</form>
 			</div>
 		</div>
@@ -35,5 +35,12 @@
 	
 	<!-- CDN(s) & local script -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.btn').on('hover', function(){
+				$(this).css('color', 'black');
+			});
+		});
+	</script>
 </body>
 </html>

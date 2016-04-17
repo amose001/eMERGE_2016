@@ -38,3 +38,14 @@ label {
 	margin: 0 auto;
 	text-align: center;
 }
+
+.btn {
+	display:inline-block;
+	color:#FFF;
+	font-size:1.2em;
+	font-weight:400;
+	background:#7accc8;
+	padding:10px 30px;
+	border-bottom:4px solid #45A39E;
+	border-radius:3px;
+}
