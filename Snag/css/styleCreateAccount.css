@@ -774,5 +774,19 @@ h1{
 	margin-bottom:10px;
 	padding-top:50px;
 	}
+	
+	#hi{
+		margin: 10px 10px 10px 10px;
+		font-size:60px;
+		padding-bottom:40px;
+		
+		}
+		
+		span{
+			
+			color:black;
+			font-size:36px;
+			
+			}
 
 /*--meadia quiries end here--*/
