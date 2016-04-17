@@ -6,7 +6,7 @@ var path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '')));
+app.use(express.static(path.join(__dirname, '../')));
 
 var user_name = "";
 
