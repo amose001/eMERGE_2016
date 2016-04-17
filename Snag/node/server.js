@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var dbhandler = require("./dbhandler.js");
 var path = require('path')
+var geofence = require("./geofence.js");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -68,8 +69,15 @@ app.post('/test', function(req,res){
 
 app.route('/location')
     .post(function (req, res) {
-
-});
+        var Lo = req.body.long2;
+        var La = req.body.lat2;
+        var code = req.body.bob;
+        var results = geofence.getCoords(code, Lo, La);
+        if (results) {
+            res.redirect('/snag2.html')
+        }
+    }
+);
 
 app.listen(3000,function(){
     console.log("Started on PORT 3000");

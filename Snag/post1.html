@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,25 +56,54 @@ function check(){
         //alert(latitudes);
         console.log("%s %s", longitudes, latitudes);
     }
+  }
+  </script>
+  <script type="text/javascript">
+  // JavaScript source code
+  var eLon;
+  var eLat;
+  var longitudes;
+  var latitudes;
+  function getCoordinates() {
 
-    function onError(error) {
-       // alert("wait 1");
-        alert('code: ' + error.code + '\n' +
-              'message: ' + error.message + '\n');
-        //alert("wait");
+    //getUserLocation();
+    eLon = document.getElementById("longitude");
+    eLat = document.getElementById("latitude");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, onError);
+      alert('2');
+    } else {
+      console.log("Geolocation is not supported by this browser.");
     }
-</script>
+  function showPosition(position) {
+    //alert("got here");
+    longitudes = position.coords.longitude;
+    latitudes = position.coords.latitude;
+    eLon.value = longitudes;
+    eLat.value = latitudes;
+    //alert(longitudes);
+    //alert(latitudes);
+    console.log("%s %s", longitudes, latitudes);
+  }
 
-    <script type="text/javascript">
-        function hideInputs() {
-            var eLon = document.getElementById("longitude");
-            var eLat = document.getElementById("latitude");
-            eLon.style.display = "none";
-            eLat.style.display = "none";
-            getCoordinates();
-        }
+  function onError(error) {
+    // alert("wait 1");
+    alert('code: ' + error.code + '\n' +
+    'message: ' + error.message + '\n');
+    //alert("wait");
+  }
+  </script>
 
-    </script>
+  <script type="text/javascript">
+  function hideInputs() {
+    var eLon = document.getElementById("longitude");
+    var eLat = document.getElementById("latitude");
+    eLon.style.display = "none";
+    eLat.style.display = "none";
+    getCoordinates();
+  }
+
+  </script>
     
     
 </head>
@@ -134,52 +163,54 @@ function check(){
 <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
                     <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
 
-                <h5>Do you want to limit the amounf of buyers?</h5>
+        <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
+        <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+
+        <h5>Do you want to limit the amount of buyers?</h5>
 
 
-                <div id="limit" class="radio-btns">
-                    <div class="swit">
-                        <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
-                        <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
-                        <div class="clear"></div>
+        <div id="limit" class="radio-btns">
+          <div class="swit">
+            <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
+            <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
+            <div class="clear"></div>
 
 
-                          <!-- this appears when yes is fileld -->
-                            <br/>
-                            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
+            <!-- this appears when yes is fileld -->
+            <br/>
+            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
 
-                    </div>
-
-
-
-
-                </div>
-                <h5>some shit here</h5>
-                <div class="radio-btns">
-                    <div class="swit">
-                        <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div id="goodstuff">
-                    <input id="longitude" name="long" display="" value="" />
-                    <input id="latitude" name="lat" display="" value="" />
-                </div>
+          </div>
 
 
 
-                <h5>availabe for...... yea..... </h5>
-                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+
+        </div>
+        <h5>some shit here</h5>
+        <div class="radio-btns">
+          <div class="swit">
+            <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div id="goodstuff">
+          <input id="longitude" name="long" display="" value="" />
+          <input id="latitude" name="lat" display="" value="" />
+        </div>
+
+
+
+        <h5>available for...... yea..... </h5>
+        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 <br/>
                 <input type="submit" value="Post my Promo" onclick="getCoordinates()">
             </form>
         </div>
-
-</div>
+  </div>
 
 </body>
-    </html>
+</html>

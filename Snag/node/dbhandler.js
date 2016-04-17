@@ -35,3 +35,23 @@ exports.findData = function(){
         });
     });
 }
+
+exports.selectCoordinates = function (long1,lat1) {
+    /*
+    var cursor = db.collection('sales').find(
+            { long: long1, lat:lat1 },
+            { long: 1, lat: 1 }
+            ).toArray(function (err, items) {
+                //return items;
+                if (checkLocation(radius, custLat, items[0].lat, custLong, items[0].long)) {
+                    //print("user is in range");
+                    console.log("user is in range : %s %s", items[0].lat, items[0].long);
+                    return true;
+                };
+            });
+    */
+}
+
+exports.getSeller = function (codeword) {
+
+}
