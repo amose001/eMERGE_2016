@@ -5,6 +5,7 @@ var dbhandler = require("./dbhandler.js");
 var path = require('path')
 var geofence = require("./geofence.js");
 var visareq = require("./visa.js");
+//var async = require("async");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
