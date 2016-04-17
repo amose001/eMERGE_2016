@@ -75,6 +75,7 @@ app.route('/location')
         var La = req.body.lat2;
         var code = req.body.bob;
         geofence.getCoords(code, Lo, La);
+
         results = geofence.iteminfo;
         console.log(Lo, La, code);
         console.log(results);
