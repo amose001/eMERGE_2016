@@ -89,18 +89,23 @@ app.route('/location')
 app.route('/createAccount')
     .post(function (req, res) {
         res.redirect('/createAccount.html')
-    })
+    });
+
+app.route('/snag2to3')
+    .post(function (req, res) {
+        res.redirect('/snag3.html')
+    });
 
 app.route('/snag2_3')
     .post(function (req, res) {
         res.redirect('/snag3.html')
-    })
+    });
 
 app.route('/snag3_4')
     .post(function (req, res) {
         visareq.visaBuy();
         res.redirect('/snag4.html')
-    })
+    });
 
 app.listen(3000,function(){
     console.log("Started on PORT 3000");
