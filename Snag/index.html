@@ -89,9 +89,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </div>
             </li>
             <li class="login">
-              <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Sign Up</span></a>
-                <div id="loginBox">
-                    <form id="crtAcct" action="/createAccount" method="POST">
+            <form id="crtAcct" action="/createAccount" method="POST">
+                <div id="loginContainer">
+                    <!--<a href="#" id="crtAcct" style='display:block'><span> + Sign Up</span></a>-->
+                    <input type="submit" style='display:block' id="loginButton" value="Sign Up">
+                    <div id="loginBox">
+
                         <fieldset id="body">
                             <fieldset>
                                 <label for="email">User Name</label>
@@ -109,13 +112,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <label for="password">Confirm Password</label>
                                 <input type="password" value="">
                             </fieldset>
-
+                            <input type="submit" id="signup" value="Sign Up">
                         </fieldset>
-                        <input type="submit" id="signup" value="Sign Up">
-                        <span><a href="#">Already do u have an account ?</a></span>
-                    </form>
+
+                    </div>
                 </div>
-              </div>
+            </form>
             </li>
             <div class="clear"></div>
           </ul>
@@ -187,7 +189,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     maxWidth: 605
   });
   */
-  prettyPrint();
+  //prettyPrint();
 });
 
 $(document).delegate(".nav-list li a", "click", function(){
