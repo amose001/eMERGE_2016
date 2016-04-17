@@ -13,7 +13,7 @@
 	display: inline-block;
 }
 
-#main {
+body {
 	background-color: #FF772F;
 	height: 88.8vh;
 }
@@ -100,3 +100,13 @@ button:hover {
 #headline {
 	color: white;
 	}
+	
+	#sale{
+		background-color:white;
+		margin-left: 150px;
+		margin-right:150px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		
+		
+		}

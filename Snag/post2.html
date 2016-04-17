@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -417,7 +417,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="total-sales">
 			  <div class="user-trends">
-				<div class="alert-close7"> </div>					
+							
 					
 			<canvas id="bar" height="340" width="780"></canvas>
 					<script>
@@ -467,14 +467,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>			
 			<div class="total-world">
 			  <div class="world-map">
-				<div class="alert-close6"> </div> 
-					<h3>Sales around world</h3>
+     
+					                <h3>Keep that bait hooked.</h3>
+                    
+                                    <iframe></iframe>
+                            <script>
+                    // Note: This example requires that you consent to location sharing when
+                    // prompted by your browser. If you see the error "The Geolocation service
+                    // failed.", it means you probably did not give permission for the browser to
+                    // locate you.
+
+                    function initMap() {
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: -34.397, lng: 150.644 },
+                            zoom: 6
+                        });
+                        var infoWindow = new google.maps.InfoWindow({ map: map });
+
+                        // Try HTML5 geolocation.
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function (position) {
+                                var pos = {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude
+                                };
+
+                                infoWindow.setPosition(pos);
+                                infoWindow.setContent('Location found.');
+                                map.setCenter(pos);
+                            }, function () {
+                                handleLocationError(true, infoWindow, map.getCenter());
+                            });
+                        } else {
+                            // Browser doesn't support Geolocation
+                            handleLocationError(false, infoWindow, map.getCenter());
+                        }
+                    }
+
+                    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent(browserHasGeolocation ?
+                                              'Error: The Geolocation service failed.' :
+                                              'Error: Your browser doesn\'t support geolocation.');
+                    }
+                            </script>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsoktknnIUTOqIuZOjHzCYuRj7Acu635s&callback=initMap">
+                            </script>
+                    
+                    
 					<p><span class="color1"></span>40%<span class="color2"></span>12%<span class="color3"></span>11%<span class="color4"></span>10%<span class="color5"></span>18%</p>
 					<div class="clearfix"></div>
 					<div id="vmap" style="width: 600px; height: 400px;"></div>
+                  <div id="map"></div>
 				</div>
+
+
 				<div class="site-report">
-				<div class="alert-close3"> </div>
+			
 					<h3>Site Report</h3>
 					<div class="skills-top">
 						<h5>Sales</h5>
