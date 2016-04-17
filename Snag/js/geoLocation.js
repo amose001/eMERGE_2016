@@ -1,7 +1,7 @@
 // JavaScript source code
 var longitude;
 var latitude;
-//getUserLocation();
+getUserLocation();
 function getUserLocation() {
     //alert('1');
     if (navigator.geolocation) {
