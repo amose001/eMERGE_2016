@@ -36,18 +36,26 @@ function check(){
         var eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
             alert('2');
-            navigator.geolocation.getCurrentPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition, onError);
         } else {
             console.log("Geolocation is not supported by this browser.");
         }
     }
 
     function showPosition(position) {
+        alert("got here");
         longitudes = position.coords.longitude;
         latitudes = position.coords.latitude;
         eLon.value = longitudes;
         eLat.value = latitudes;
+        alert(longitudes);
+        alert(latitudes);
         console.log("%s %s", longitudes, latitudes);
+    }
+
+    function onError(error) {
+        alert('code: ' + error.code + '\n' +
+              'message: ' + error.message + '\n');
     }
 </script>
 
