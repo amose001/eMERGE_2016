@@ -1,6 +1,6 @@
-	.navbar {
+.navbar {
 	background-color: #232D3B;
-	border-bottom: 8px solid #EE5F15;
+	border-bottom: 3px solid blanchedalmond;
 	height: 11.5vh;
 	position: relative;
 	margin-bottom: 0px;
@@ -11,6 +11,37 @@
 	left: 49%;
 	margin-left: -50px !important;  /* 50% of your logo width */
 	display: inline-block;
+}
+
+#main {
+	background-color: #FF772F;
+	height: 88.8vh;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	color: white;
+	font-size: 8vmin;
+	margin-top: 7%;
+	margin-bottom: 3.5%;
+}
+
+button {
+	display: block;
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: 400;
+	background: #7accc8;
+	padding: 10px 30px;
+	border-bottom: 4px solid #45A39E;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+button:hover {
+	background-color: #267571;
+	color: white;
 }
 
 /*--- timer Code ---*/
@@ -35,10 +66,6 @@
   text-decoration: none;
 }
 
-a:hover{
-  background: #487;
-}
-
 #clockdiv{
 	font-family: sans-serif;
 	color: #fff;
@@ -46,7 +73,7 @@ a:hover{
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 
