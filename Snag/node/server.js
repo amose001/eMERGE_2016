@@ -22,11 +22,13 @@ app.route('/login')
   .post(function(req,res) {
     user_name=req.body.user;
     var password=req.body.password;
+    console.log(user_name);
+    console.log(password);
     var success = dbhandler.login(user_name,password);
     if(success==0) {
       user_name="";
     }
-    res.redirect(/*redirect to home page*/);
+    res.redirect('/');
 
 });
 
@@ -38,6 +40,22 @@ app.route('/sales')
     var range=req.body.range;
     var datetime=req.body.datetime;
     var stock=req.body.stock;
+    console.log(codeword);
+    console.log(headline);
+    console.log(info);
+    console.log(range);
+    console.log(datetime);
+    console.log(stock);
+    var data = {'name':'\''+headline+'\'',
+      'codeword':'\''+codeword+'\'',
+      'info':'\''+info+'\'',
+      'range':'\''+range+'\'',
+      'stock':'\''+stock+'\'',
+      'long':'-80.1909090',
+      'lat':'25.7776200',
+      'endTime':'\''+datetime+'\''};
+    dbhandler.insertData(data);
+    res.redirect('/post2.html');
 });
 
 // app.post('/'+user_name+'/sales', function(req,res){

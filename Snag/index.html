@@ -27,36 +27,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     $('#slider').nivoSlider();
   });
   </script>
+
+  <script type="text/javascript">
+    function authLogin() {
+      var username = document.getElementById()
+    }
+  </script>
 </head>
 <body>
   <div class="header" id="home">
-<!-- <<<<<<< HEAD
-  	  <div class="header_top">
-	   <div class="wrap">
-		 	     <div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="" /></a>
-		 </div>
-						<div class="menu">
-						    <ul>
-						    	<li class="current"><a href="#section-1" class="scroll"> </a></li>
-								<li><a href="#section-2" class="scroll"></a></li>
-								<li><a href="#section-3" class="scroll"></a></li>
-								<li><a href="#section-4" class="scroll"></a></li>
-								<li class="login" >
-									<div id="loginContainer"><a href="#" id="loginButton"><span> + Login</span></a>
-						                <div id="loginBox">
-						                    <form id="loginForm" action="/login" method="POST">
-						                        <fieldset id="body">
-
-						                            <fieldset>
-						                                <label for="email">Email Address</label>
-						                                <input type="text" name="user" value="">
-						                            </fieldset>
-						                            <fieldset>
-						                                <label for="password">Password</label>
-						                                <input type="password" name="password" value="">
-						                            </fieldset>
-======= -->
     <div class="header_top">
       <div class="wrap">
         <div class="logo">
@@ -68,15 +47,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li><a href="#section-2" class="scroll"></a></li>
             <li><a href="#section-3" class="scroll"></a></li>
             <li><a href="#section-4" class="scroll"></a></li>
+            <div id="successLogin" display="none">
+              success
+            </div>
             <li class="login" >
-              <div id="loginContainer"><a href="#" id="loginButton"><span> + Login</span></a>
+              <div id="loginContainer"><a href="#" id="loginButton" display="block"><span> + Login</span></a>
                 <div id="loginBox">
                   <form id="loginForm" action="/login" method="POST">
                     <fieldset id="body">
 
                       <fieldset>
                         <label for="email">Email Address</label>
-                        <input type="text" name="user" value="">
+                        <input type="text" name="user" value="" id="username">
                       </fieldset>
                       <fieldset>
                         <label for="password">Password</label>
@@ -92,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </div>
             </li>
             <li class="login">
-              <div id="loginContainer"><a href="#" id="loginButton"><span> + Sign Up</span></a>
+              <div id="loginContainer"><a href="#" id="loginButton" display="block"><span> + Sign Up</span></a>
                 <div id="loginBox">
                   <form id="loginForm">
                     <fieldset id="body">
@@ -112,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <label for="password">Confirm Password</label>
                         <input type="password" value="">
                       </fieldset>
-                      <input type="submit" id="login" value="Sign Up">
+                      <input type="submit" id="signup" value="Sign Up">
                       <label for="checkbox"><input type="checkbox"> <i>T & C apply</i></label>
                     </fieldset>
                     <span><a href="#">Already do u have an account ?</a></span>
@@ -150,7 +132,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <div class="dropdown-buttons">
             <div class="dropdown-button">
               <a href="./snag1.html" class="test">SNAG</a>
-              <a href="./post.html" class="test">POST</a>
+              <a href="./post1.html" class="test">POST</a>
             </div>
           </div>
           <div class="quote_button">
@@ -203,4 +185,7 @@ $(document).delegate(".nav-list li a", "click", function(){
 </div>
 </div>
 </body>
+<script>
+
+</script>
 </html>
