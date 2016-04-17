@@ -51,14 +51,14 @@ app.route('/sales')
     console.log(stock);
     console.log(lat);
     console.log(long);
-    var data = {'name':'\''+headline+'\'',
-                'codeword':'\''+codeword+'\'',
-                'info':'\''+info+'\'',
-                'range':'\''+range+'\'',
-                'stock':'\''+stock+'\'',
-                'long':'\''+long+'\'',
-                'lat':'\''+lat+'\'',
-                'endTime':'\''+datetime+'\''
+    var data = {'name':headline,
+                'codeword':codeword,
+                'info':info,
+                'range':range,
+                'stock':stock,
+                'long':long,
+                'lat':lat,
+                'endTime':datetime
               };
     dbhandler.insertData(data);
     res.redirect('/post2.html');
