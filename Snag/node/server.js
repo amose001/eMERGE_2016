@@ -79,7 +79,7 @@ app.route('/location')
         Async too dank 4 me
         */
         console.log("swag "+results);
-        if (results != "") {
+        if (results != null) {
             res.redirect('/snag2.html');
         } else {
             res.redirect('/Error.html')
