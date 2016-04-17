@@ -2312,3 +2312,48 @@ button#focus-single,button#focus-multiple,button#focus-coords,button#focus-init 
 		text-align: center;
 		color: #ff742c;
 		}
+		
+		
+		
+		
+#clockdiv{
+  display: inline-block;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+a:hover{
+  background: #00BF96;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
