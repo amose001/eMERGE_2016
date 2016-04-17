@@ -1,4 +1,4 @@
-﻿<!--A Design by W3layouts
+<!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -29,24 +29,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </script>
 
   <script type="text/javascript">
-    function authLogin() {
+  function authLogin() {
 
-      $.get("/login", function(username) {
-        alert("BRO YOUR USERNAME IS: " + username);
-      });
+    $.get("/login", function(username) {
+      alert("BRO YOUR USERNAME IS: " + username);
+    });
 
-      var username = document.getElementById('username').value;
-      alert(username);
-      if(username.length <= 0) {
-        // user login failed
-        alert("login fail");
-      }
-      else {
-        // user login success
-        // hide login/signup button and display username
-        alert("login success");
-      }
+    var username = document.getElementById('username').value;
+    alert(username);
+    if(username.length <= 0) {
+      // user login failed
+      alert("login fail");
     }
+    else {
+      // user login success
+      // hide login/signup button and display username
+      alert("login success");
+    }
+  }
   </script>
 </head>
 <body>
@@ -91,29 +91,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="login">
               <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Sign Up</span></a>
                 <div id="loginBox">
-                    <form id="crtAcct" action="/createAccount" method="POST">
-                        <fieldset id="body">
-                            <fieldset>
-                                <label for="email">User Name</label>
-                                <input type="text" value="">
-                            </fieldset>
-                            <fieldset>
-                                <label for="email">Email Address</label>
-                                <input type="text" value="">
-                            </fieldset>
-                            <fieldset>
-                                <label for="password">Password</label>
-                                <input type="password" value="">
-                            </fieldset>
-                            <fieldset>
-                                <label for="password">Confirm Password</label>
-                                <input type="password" value="">
-                            </fieldset>
+                  <form id="crtAcct" action="/createAccount" method="POST">
+                    <fieldset id="body">
+                      <fieldset>
+                        <label for="email">User Name</label>
+                        <input type="text" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="email">Email Address</label>
+                        <input type="text" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="password">Password</label>
+                        <input type="password" value="">
+                      </fieldset>
+                      <fieldset>
+                        <label for="password">Confirm Password</label>
+                        <input type="password" value="">
+                      </fieldset>
 
-                        </fieldset>
-                        <input type="submit" id="signup" value="Sign Up">
-                        <span><a href="#">Already do u have an account ?</a></span>
-                    </form>
+                    </fieldset>
+                    <input type="submit" id="signup" value="Sign Up">
+                    <span><a href="#">Already do u have an account ?</a></span>
+                  </form>
                 </div>
               </div>
             </li>
