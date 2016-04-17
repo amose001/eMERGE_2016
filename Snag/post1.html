@@ -40,7 +40,7 @@
     eLat = document.getElementById("latitude");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, onError);
-      alert('2');
+      //alert('2');
     } else {
       console.log("Geolocation is not supported by this browser.");
     }
@@ -71,12 +71,12 @@
     eLat = document.getElementById("latitude");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, onError);
-      alert('2');
+      //alert('2');
     } else {
       console.log("Geolocation is not supported by this browser.");
     }
     function showPosition(position) {
-      alert("got here");
+     // alert("got here");
       longitudes = position.coords.longitude;
       latitudes = position.coords.latitude;
       eLon.value = longitudes;
