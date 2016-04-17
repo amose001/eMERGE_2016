@@ -35,16 +35,19 @@ function check(){
         var eLon = document.getElementById("longitude");
         var eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
-            //alert('2');
+            alert('2');
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
             console.log("Geolocation is not supported by this browser.");
         }
+    }
+
+    function showPosition(position) {
         longitudes = position.coords.longitude;
         latitudes = position.coords.latitude;
         eLon.value = longitudes;
         eLat.value = latitudes;
-        console.log("%s %s", longitude, latitude);
+        console.log("%s %s", longitudes, latitudes);
     }
 </script>
 
@@ -57,74 +60,74 @@ function check(){
         }
 
     </script>
+</head>
 
-    </head>
-    <body onload="hideInputs()">
+<body onload="hideInputs()">
     <div class="content">
-      <h1>Post Your Promotion</h1>
-      <div class="main">
+        <h1>Post Your Promotion</h1>
+        <div class="main">
             <form>
                 <h5>Enter a code word</h5>
-                    <input type="text" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                <input type="text" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
                 <h5>Enter a headline for your deal</h5>
-                    <input type="text" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
+                <input type="text" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
                 <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
-                    <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 
-            <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-                    <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+                <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
+                <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
 
-            <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-                    <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
-
-
+                <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
+                <input type="text" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
 
 
 
-            <h5>Do you want to limit the amounf of buyers?</h5>
 
 
-                <div id= "limit" class="radio-btns">
-                        <div class="swit">
-                            <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
-                            <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
-                            <div class="clear"></div>
+                <h5>Do you want to limit the amounf of buyers?</h5>
 
-                          <!-- this appears when yes is fileld -->
-                            <br/>
-                            <input id="appear" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
 
-                        </div>
+                <div id="limit" class="radio-btns">
+                    <div class="swit">
+                        <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
+                        <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
+                        <div class="clear"></div>
+
+                        <!-- this appears when yes is fileld -->
+                        <br />
+                        <input id="appear" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
+
+                    </div>
 
 
 
 
                 </div>
-            <h5>some shit here</h5>
+                <h5>some shit here</h5>
                 <div class="radio-btns">
-                        <div class="swit">
-                            <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
-                            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
-                            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
-                            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
-                            <div class="clear"></div>
-                        </div>
+                    <div class="swit">
+                        <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
+                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
+                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
+                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
+                        <div class="clear"></div>
+                    </div>
                 </div>
 
                 <div id="goodstuff">
-                    <input id="longitude" name="long" display="" value=""/>
-                    <input id="latitude" name="lat" display="" value=""/>
+                    <input id="longitude" name="long" display="" value="" />
+                    <input id="latitude" name="lat" display="" value="" />
                 </div>
 
 
 
                 <h5>availabe for...... yea..... </h5>
-                    <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
-                    <input type="submit" value="Post my Promo" onclick="getCoordinates()">
+                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+                <input type="submit" value="Post my Promo" onclick="getCoordinates()">
             </form>
         </div>
 
     </div>
 
-    </body>
+</body>
     </html>
