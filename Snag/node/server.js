@@ -51,41 +51,20 @@ app.route('/sales')
     console.log(lat);
     console.log(long);
     var data = {'name':'\''+headline+'\'',
-      'codeword':'\''+codeword+'\'',
-      'info':'\''+info+'\'',
-      'range':'\''+range+'\'',
-      'stock':'\''+stock+'\'',
-      'long':'\''+long+'\'',
-      'lat':'\''+lat+'\'',
-      'endTime':'\''+datetime+'\''};
+                'codeword':'\''+codeword+'\'',
+                'info':'\''+info+'\'',
+                'range':'\''+range+'\'',
+                'stock':'\''+stock+'\'',
+                'long':'\''+long+'\'',
+                'lat':'\''+lat+'\'',
+                'endTime':'\''+datetime+'\''
+              };
     dbhandler.insertData(data);
     res.redirect('/post2.html');
 });
 
-// app.post('/'+user_name+'/sales', function(req,res){
-//     var passCode=req.body.passCode;
-//     var stock=req.body.stock;
-//     var range=req.body.range;
-//     var endTime=req.body.endTime;
-// });
-
 app.post('/test', function(req,res){
 });
-
-// app.post('/login', function(req,res){
-//     user_name=req.body.user;
-//     var password=req.body.password;
-//     var success = dbhandler.login(user_name, password);
-//     if (success == 0){
-//         user_name = "";
-//         //login failed
-//     }
-//     res.redirect(/*redirect to home page*/);
-// });
-//
-// app.get('/login', function(req,res){
-//     res.send(user_name);
-// });
 
 app.route('/location')
     .post(function (req, res) {

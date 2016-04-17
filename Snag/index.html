@@ -31,7 +31,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script type="text/javascript">
     function authLogin() {
 
-      $.get("/login")
+      $.get("/login", function(username) {
+        alert("BRO YOUR USERNAME IS: " + username);
+      });
 
       var username = document.getElementById('username').value;
       alert(username);
@@ -171,7 +173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <link rel="stylesheet" href="css/jquery.sliderTabs.min.css">
   <script src="js/jquery.sliderTabs.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
   <script>
   $(document).ready(function(){
     var tabs = $("div#mySliderTabs").sliderTabs({

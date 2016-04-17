@@ -97,6 +97,10 @@ function check(){
                 <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
                     <textarea onfocus="this.value = '';" name="info" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 
+                    <h5>End Date of Sale:</h5>
+                    <input type="datetime-local" name="datetime" id="date">
+
+
             <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
                     <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
 
