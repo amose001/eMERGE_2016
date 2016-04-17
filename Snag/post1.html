@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,18 +71,18 @@
     eLat = document.getElementById("latitude");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, onError);
-      // alert('2');
+      alert('2');
     } else {
       console.log("Geolocation is not supported by this browser.");
     }
     function showPosition(position) {
-      //alert("got here");
+      alert("got here");
       longitudes = position.coords.longitude;
       latitudes = position.coords.latitude;
       eLon.value = longitudes;
       eLat.value = latitudes;
-      //alert(longitudes);
-      //alert(latitudes);
+      alert(longitudes);
+      alert(latitudes);
       console.log("%s %s", longitudes, latitudes);
     }
   }
@@ -96,8 +96,8 @@
 
   <script type="text/javascript">
   function hideInputs() {
-    var eLon = document.getElementById("longitude");
-    var eLat = document.getElementById("latitude");
+    eLon = document.getElementById("longitude");
+    eLat = document.getElementById("latitude");
     eLon.style.display = "none";
     eLat.style.display = "none";
     getCoordinates();
@@ -170,7 +170,10 @@
 
           </div>
 
-
+            <div>
+                <input type="text" id="longitude" name="long"/>
+                <input type="text" id="latitude" name="lat"/>
+            </div>
 
 
 

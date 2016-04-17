@@ -85,7 +85,7 @@ app.route('/location')
         } else {
             res.redirect('/Error.html')
         }
-        res.redirect('/snag2.html');
+        //res.redirect('/snag2.html');
         //else {
           //  res.redirect('/Error.html')
         //}
