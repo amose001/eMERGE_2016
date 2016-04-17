@@ -30,6 +30,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   <script type="text/javascript">
     function authLogin() {
+
+      $.get("/login")
+
       var username = document.getElementById('username').value;
       alert(username);
       if(username.length <= 0) {
@@ -63,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="login" >
               <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Login</span></a>
                 <div id="loginBox">
-                  <form id="loginForm" action="/login" method="POST">
+                  <form id="loginForm" action="/login" method="POST" onload="authLogin()">
                     <fieldset id="body">
 
                       <fieldset>
@@ -168,6 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <link rel="stylesheet" href="css/jquery.sliderTabs.min.css">
   <script src="js/jquery.sliderTabs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
     var tabs = $("div#mySliderTabs").sliderTabs({
@@ -195,7 +199,4 @@ $(document).delegate(".nav-list li a", "click", function(){
 </div>
 </div>
 </body>
-<script>
-
-</script>
 </html>
