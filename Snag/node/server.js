@@ -74,16 +74,19 @@ app.route('/location')
         var Lo = req.body.long2;
         var La = req.body.lat2;
         var code = req.body.bob;
-        results = geofence.getCoords(code, Lo, La);
+        geofence.getCoords(code, Lo, La);
+        results = geofence.iteminfo;
         /*
         Async too dank 4 me
         */
         console.log("swag "+results);
-        if (results != null) {
-            res.redirect('/snag2.html');
-        } else {
-            res.redirect('/Error.html')
+        while (results == null || results == "") {
+            console.log("swag "+results);
         }
+        res.redirect('/snag2.html');
+        //else {
+          //  res.redirect('/Error.html')
+        //}
     }
 );
 app.route('/createAccount')
