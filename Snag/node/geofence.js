@@ -15,8 +15,7 @@ exports.getCoords = function getCoordinates(user, custLong, custLat) {
     var output = "";
     var db = MongoClient.connect("mongodb://52.201.9.182:27017/emerge", function(err, db){
         var cursor = db.collection('sales').find(
-            { codeword: user },
-            { long: 1, lat: 1 , range:1}
+            { codeword: user }
             ).toArray(function(err, items) {
                 //return items;
                 if (checkLocation(items[0].range, custLat, items[0].lat, custLong, items[0].long)) {

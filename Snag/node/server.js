@@ -77,6 +77,7 @@ app.route('/location')
         geofence.getCoords(code, Lo, La);
         results = geofence.iteminfo;
         console.log(Lo, La, code);
+        console.log(results);
         if (results != '') {
             res.redirect('/snag2.html');
         } else {
