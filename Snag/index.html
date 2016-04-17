@@ -30,7 +30,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   <script type="text/javascript">
     function authLogin() {
-      var username = document.getElementById()
+      var username = document.getElementById('username').value;
+      alert(username);
+      if(username.length <= 0) {
+        // user login failed
+        alert("login fail");
+      }
+      else {
+        // user login success
+        // hide login/signup button and display username
+        alert("login success");
+      }
     }
   </script>
 </head>
@@ -47,11 +57,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li><a href="#section-2" class="scroll"></a></li>
             <li><a href="#section-3" class="scroll"></a></li>
             <li><a href="#section-4" class="scroll"></a></li>
-            <div id="successLogin" display="none">
+            <div id="successLogin" style='display:none'>
               success
             </div>
             <li class="login" >
-              <div id="loginContainer"><a href="#" id="loginButton" display="block"><span> + Login</span></a>
+              <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Login</span></a>
                 <div id="loginBox">
                   <form id="loginForm" action="/login" method="POST">
                     <fieldset id="body">
@@ -65,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input type="password" name="password" value="">
                       </fieldset>
 
-                      <input type="submit" id="login" value="Login">
+                      <input type="submit" id="login" value="Login" onclick="authLogin()">
 
                     </fieldset>
 
@@ -74,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </div>
             </li>
             <li class="login">
-              <div id="loginContainer"><a href="#" id="loginButton" display="block"><span> + Sign Up</span></a>
+              <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Sign Up</span></a>
                 <div id="loginBox">
                   <form id="loginForm">
                     <fieldset id="body">
