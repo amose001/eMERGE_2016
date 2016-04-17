@@ -33,7 +33,7 @@ function check(){
         var latitudes;
         //getUserLocation();
         var eLon = document.getElementById("longitude");
-        var eLat = document.getElementById("latitude")
+        var eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
             //alert('2');
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -48,8 +48,18 @@ function check(){
     }
 </script>
 
+    <script type="text/javascript">
+        function hideInputs() {
+            var eLon = document.getElementById("longitude");
+            var eLat = document.getElementById("latitude");
+            eLon.style.display = "none";
+            eLat.style.display = "none";
+        }
+
+    </script>
+
     </head>
-    <body>
+    <body onload="hideInputs()">
     <div class="content">
       <h1>Post Your Promotion</h1>
       <div class="main">
@@ -102,8 +112,8 @@ function check(){
                 </div>
 
                 <div id="goodstuff">
-                    <input id="longitude" name="long" display="none" value=""/>
-                    <input id="latitude" name="lat" display="none" value=""/>
+                    <input id="longitude" name="long" display="" value=""/>
+                    <input id="latitude" name="lat" display="" value=""/>
                 </div>
 
 
