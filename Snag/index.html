@@ -91,7 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li class="login">
               <div id="loginContainer"><a href="#" id="loginButton" style='display:block'><span> + Sign Up</span></a>
                 <div id="loginBox">
-                    <form action="/createAccount" method="post" id="loginForm">
+                    <form id="crtAcct" action="/createAccount" method="POST">
                         <fieldset id="body">
                             <fieldset>
                                 <label for="email">User Name</label>
@@ -109,9 +109,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <label for="password">Confirm Password</label>
                                 <input type="password" value="">
                             </fieldset>
-                            <input type="submit" id="signup" value="Sign Up">
-                            <label for="checkbox"><input type="checkbox"> <i>T & C apply</i></label>
+
                         </fieldset>
+                        <input type="submit" id="signup" value="Sign Up">
                         <span><a href="#">Already do u have an account ?</a></span>
                     </form>
                 </div>
