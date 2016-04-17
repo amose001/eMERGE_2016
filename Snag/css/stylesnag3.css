@@ -878,3 +878,18 @@ transition:0.5s all;
     width: 700px;
     margin: 50px auto;
 		}
+		
+		.navbar {
+	background-color: #232D3B;
+	border-bottom: 8px solid blanchedalmond;
+	height: 11.5vh;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+#logo {
+	position: absolute;
+	left: 49%;
+	margin-left: -50px !important;  /* 50% of your logo width */
+	display: inline-block;
+}
