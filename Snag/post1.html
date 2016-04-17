@@ -128,10 +128,8 @@ function check(){
                     <input type="text" name="headline" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
                 <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
               <textarea onfocus="this.value = '';" name="info" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
-
-                    <h5>What da does the sale end? :</h5>
-                    
-                    <input name="end_sale" type="date">
+              <h5>What day and time does the flash deal end? </h5>
+              <input name="end_sale" type="date">
               <input name="end_sale" type="time">
                     
                     
@@ -154,19 +152,9 @@ function check(){
         });
     </script>
 </div>
-                    
-                    
-                    
-                    
-                    
-                    
-<h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-                    <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
-
-        <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-        <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
-
-        <h5>Do you want to limit the amount of buyers ?</h5>
+              <h5>How far do you want your promotion to stretch? <span>( Distance In miles ) </span></h5>
+              <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+<h5>Do you want to limit the amount of buyers ?</h5>
 
 
         <div id="limit" class="radio-btns">
@@ -185,30 +173,14 @@ function check(){
 
 
 
+     
+
         </div>
-        <h5>some shit here</h5>
-        <div class="radio-btns">
-          <div class="swit">
-            <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
-            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
-            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
-            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
-            <div class="clear"></div>
-          </div>
-        </div>
-
-        <div id="goodstuff">
-          <input id="longitude" name="long" display="" value="" />
-          <input id="latitude" name="lat" display="" value="" />
-        </div>
-
-
-
-        <h5>available for...... yea..... </h5>
-        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 <br/>
                 <input type="submit" value="Post my Promo" onclick="getCoordinates()">
             </form>
+            
+            
         </div>
   </div>
 
