@@ -46,6 +46,15 @@ app.route('/sales')
     console.log(range);
     console.log(datetime);
     console.log(stock);
+    var data = {'name':'\''+headline+'\'',
+      'codeword':'\''+codeword+'\'',
+      'info':'\''+info+'\'',
+      'range':'\''+range+'\'',
+      'stock':'\''+stock+'\'',
+      'long':'-80.1909090',
+      'lat':'25.7776200',
+      'endTime':'\''+datetime+'\''};
+    dbhandler.insertData(data);
     res.redirect('/post2.html');
 });
 
