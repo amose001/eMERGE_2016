@@ -28,14 +28,16 @@ function check(){
 </script>
 <script type="text/javascript">
     // JavaScript source code
+    var eLon;
+    var eLat;
+    var longitudes;
+    var latitudes;
     function getCoordinates() {
-        var longitudes;
-        var latitudes;
+
         //getUserLocation();
-        var eLon = document.getElementById("longitude");
-        var eLat = document.getElementById("latitude");
+        eLon = document.getElementById("longitude");
+        eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
-						var options = {timeout:60000};
             navigator.geolocation.getCurrentPosition(showPosition, onError);
 						alert('2');
         } else {
@@ -44,20 +46,21 @@ function check(){
     }
 
     function showPosition(position) {
-        alert("got here");
+        //alert("got here");
         longitudes = position.coords.longitude;
         latitudes = position.coords.latitude;
         eLon.value = longitudes;
         eLat.value = latitudes;
-        alert(longitudes);
-        alert(latitudes);
+        //alert(longitudes);
+        //alert(latitudes);
         console.log("%s %s", longitudes, latitudes);
     }
 
     function onError(error) {
+       // alert("wait 1");
         alert('code: ' + error.code + '\n' +
               'message: ' + error.message + '\n');
-        alert("wait");
+        //alert("wait");
     }
 </script>
 
@@ -67,6 +70,7 @@ function check(){
             var eLat = document.getElementById("latitude");
             eLon.style.display = "none";
             eLat.style.display = "none";
+            getCoordinates();
         }
 
     </script>
