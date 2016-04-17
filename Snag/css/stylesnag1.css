@@ -1,6 +1,6 @@
 .navbar {
 	background-color: #232D3B;
-	border-bottom: 8px solid #EE5F15;
+	border-bottom: 8px solid blanchedalmond;
 	height: 11.5vh;
 	position: relative;
 	margin-bottom: 0px;
@@ -48,4 +48,9 @@ label {
 	padding:10px 30px;
 	border-bottom:4px solid #45A39E;
 	border-radius:3px;
+}
+
+.btn:hover {
+	background-color: #267571;
+	color: white;
 }
