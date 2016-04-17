@@ -605,3 +605,7 @@ a.pay:hover {
 	margin-left: -50px !important;  /* 50% of your logo width */
 	display: inline-block;
 }
+
+body{
+	background-color:#ff742c;
+	}
