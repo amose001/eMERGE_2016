@@ -642,3 +642,18 @@ a:hover{
 #headline {
 	color: white;
 	}
+	
+	.navbar {
+	background-color: #232D3B;
+	border-bottom: 8px solid #EE5F15;
+	height: 11.5vh;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+#logo {
+	position: absolute;
+	left: 49%;
+	margin-left: -50px !important;  /* 50% of your logo width */
+	display: inline-block;
+}
