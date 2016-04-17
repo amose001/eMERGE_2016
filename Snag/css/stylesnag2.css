@@ -44,6 +44,10 @@ button:hover {
 	color: white;
 }
 
+img {
+	max-width: 100%;
+}
+
 /*--- timer Code ---*/
 
 #clockdiv{
@@ -103,8 +107,8 @@ button:hover {
 	
 	#sale{
 		background-color:white;
-		margin-left: 150px;
-		margin-right:150px;
+		margin-left: 50px;
+		margin-right:50px;
 		padding-top: 50px;
 		padding-bottom: 50px;
 		
