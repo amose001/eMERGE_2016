@@ -35,8 +35,9 @@ function check(){
         var eLon = document.getElementById("longitude");
         var eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
-            alert('2');
+						var options = {timeout:60000};
             navigator.geolocation.getCurrentPosition(showPosition, onError);
+						alert('2');
         } else {
             console.log("Geolocation is not supported by this browser.");
         }
