@@ -74,12 +74,13 @@ app.route('/location')
         var Lo = req.body.long2;
         var La = req.body.lat2;
         var code = req.body.bob;
+        console.log(Lo, La, code);
         results = geofence.getCoords(code, Lo, La);
         /*
         Async too dank 4 me
         */
         console.log("swag "+results);
-        if (results != null) {
+        if (results != '') {
             res.redirect('/snag2.html');
         } else {
             res.redirect('/Error.html')
