@@ -1,154 +1,154 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Start your promo</title>
-<!-- for-mobile-apps -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Feedback Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<!-- //for-mobile-apps -->
-<link href='//fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href="css/stylepost1.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript">
-function check(){
-	//alert("1");
-	var checkb = document.getElementById('Yes');
-	if(checkb.checked){
-	//alert("2");
-		document.getElementById("appear").style.display='block';
-	}else{
-	// alert("3");
-		document.getElementById("appear").style.display='none';
-	}
-}
-</script>
-<script type="text/javascript">
-    // JavaScript source code
-    var eLon;
-    var eLat;
-    var longitudes;
-    var latitudes;
-    function getCoordinates() {
-
-        //getUserLocation();
-        eLon = document.getElementById("longitude");
-        eLat = document.getElementById("latitude");
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, onError);
-						alert('2');
-        } else {
-            console.log("Geolocation is not supported by this browser.");
-        }
+  <title>Start your promo</title>
+  <!-- for-mobile-apps -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Feedback Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <!-- //for-mobile-apps -->
+  <link href='//fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href="css/stylepost1.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript">
+  function check(){
+    //alert("1");
+    var checkb = document.getElementById('Yes');
+    if(checkb.checked){
+      //alert("2");
+      document.getElementById("appear").style.display='block';
+    }else{
+      // alert("3");
+      document.getElementById("appear").style.display='none';
     }
+  }
+  </script>
+  <script type="text/javascript">
+  // JavaScript source code
+  var eLon;
+  var eLat;
+  var longitudes;
+  var latitudes;
+  function getCoordinates() {
 
-    function showPosition(position) {
-        //alert("got here");
-        longitudes = position.coords.longitude;
-        latitudes = position.coords.latitude;
-        eLon.value = longitudes;
-        eLat.value = latitudes;
-        //alert(longitudes);
-        //alert(latitudes);
-        console.log("%s %s", longitudes, latitudes);
+    //getUserLocation();
+    eLon = document.getElementById("longitude");
+    eLat = document.getElementById("latitude");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, onError);
+      alert('2');
+    } else {
+      console.log("Geolocation is not supported by this browser.");
     }
+  }
 
-    function onError(error) {
-       // alert("wait 1");
-        alert('code: ' + error.code + '\n' +
-              'message: ' + error.message + '\n');
-        //alert("wait");
-    }
-</script>
+  function showPosition(position) {
+    //alert("got here");
+    longitudes = position.coords.longitude;
+    latitudes = position.coords.latitude;
+    eLon.value = longitudes;
+    eLat.value = latitudes;
+    //alert(longitudes);
+    //alert(latitudes);
+    console.log("%s %s", longitudes, latitudes);
+  }
 
-    <script type="text/javascript">
-        function hideInputs() {
-            var eLon = document.getElementById("longitude");
-            var eLat = document.getElementById("latitude");
-            eLon.style.display = "none";
-            eLat.style.display = "none";
-            getCoordinates();
-        }
+  function onError(error) {
+    // alert("wait 1");
+    alert('code: ' + error.code + '\n' +
+    'message: ' + error.message + '\n');
+    //alert("wait");
+  }
+  </script>
 
-    </script>
+  <script type="text/javascript">
+  function hideInputs() {
+    var eLon = document.getElementById("longitude");
+    var eLat = document.getElementById("latitude");
+    eLon.style.display = "none";
+    eLat.style.display = "none";
+    getCoordinates();
+  }
+
+  </script>
 </head>
 
 <body onload="hideInputs()">
-<!-- Navbar (fixed at top of page -->
-	<nav class="navbar navbar-fixed-top">
-			<div class="container-fluid">
-					<div class="navbar-header">
-							<a class="navbar-brand" href="index.html" id="logo"><img src="images/logo.png"></a>
-					</div>
-			</div>
-	</nav>
-    <div class="content">
+  <!-- Navbar (fixed at top of page -->
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html" id="logo"><img src="images/logo.png"></a>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
 
-      <h1>Post Your Promotion</h1>
-      <div class="main">
-            <form action="/sales" method="post">
-                <h5>Enter a code word</h5>
-                    <input type="text" name="codeword" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                <h5>Enter a headline for your deal</h5>
-                    <input type="text" name="headline" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
-                <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
-                    <textarea onfocus="this.value = '';" name="info" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+    <h1>Post Your Promotion</h1>
+    <div class="main">
+      <form action="/sales" method="post">
+        <h5>Enter a code word</h5>
+        <input type="text" name="codeword" value="your code word is... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+        <h5>Enter a headline for your deal</h5>
+        <input type="text" name="headline" value="My deal is..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'johnkeith@mail.com';}" required="">
+        <h5>Enter info about your promotion <span>( Info and restrictions ) </span> </h5>
+        <textarea onfocus="this.value = '';" name="info" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
 
-                    <h5>End Date of Sale:</h5>
-                    <input type="datetime-local" name="datetime" id="date">
-
-
-            <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
-                    <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
-
-                <h5>Do you want to limit the amounf of buyers?</h5>
+        <h5>End Date of Sale:</h5>
+        <input type="datetime-local" name="datetime" id="date">
 
 
-                <div id="limit" class="radio-btns">
-                    <div class="swit">
-                        <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
-                        <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
-                        <div class="clear"></div>
+        <h5>How far do you want your promotion to stretch?  <span>( In miles ) </span> </h5>
+        <input type="text" name="range" value="Enter a number in miles... " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter a number in miles';}" required="">
+
+        <h5>Do you want to limit the amount of buyers?</h5>
 
 
-                          <!-- this appears when yes is fileld -->
-                            <br/>
-                            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
-
-                    </div>
-
-
+        <div id="limit" class="radio-btns">
+          <div class="swit">
+            <div class="check_box_one"> <div class="radio1"> <label><input id="Yes" type="radio" name="radio1" checked="" onclick="check()"><i></i>Yes</label> </div></div>
+            <div class="check_box"> <div class="radio1"> <label><input type="radio" name="radio1"><i></i>No</label> </div></div>
+            <div class="clear"></div>
 
 
-                </div>
-                <h5>some shit here</h5>
-                <div class="radio-btns">
-                    <div class="swit">
-                        <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
-                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
+            <!-- this appears when yes is fileld -->
+            <br/>
+            <input id="appear" name="stock" type="text" value="Enter the number of buyers here " style="display:none" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the number of buyers here';}" required="">
 
-                <div id="goodstuff">
-                    <input id="longitude" name="long" display="" value="" />
-                    <input id="latitude" name="lat" display="" value="" />
-                </div>
+          </div>
 
 
 
-                <h5>availabe for...... yea..... </h5>
-                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
-                <input type="submit" value="Post my Promo" onclick="getCoordinates()">
-            </form>
+
+        </div>
+        <h5>some shit here</h5>
+        <div class="radio-btns">
+          <div class="swit">
+            <div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
+            <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
+            <div class="clear"></div>
+          </div>
         </div>
 
+        <div id="goodstuff">
+          <input id="longitude" name="long" display="" value="" />
+          <input id="latitude" name="lat" display="" value="" />
+        </div>
+
+
+
+        <h5>availabe for...... yea..... </h5>
+        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required>Type here</textarea>
+        <input type="submit" value="Post my Promo" onclick="getCoordinates()">
+      </form>
     </div>
 
+  </div>
+
 </body>
-    </html>
+</html>
