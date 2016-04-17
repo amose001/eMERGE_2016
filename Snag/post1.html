@@ -38,7 +38,7 @@ function check(){
         eLon = document.getElementById("longitude");
         eLat = document.getElementById("latitude");
         if (navigator.geolocation) {
-            alert('2');
+            //alert('2');
             navigator.geolocation.getCurrentPosition(showPosition, onError);
         } else {
             console.log("Geolocation is not supported by this browser.");
@@ -46,21 +46,21 @@ function check(){
     }
 
     function showPosition(position) {
-        alert("got here");
+        //alert("got here");
         longitudes = position.coords.longitude;
         latitudes = position.coords.latitude;
         eLon.value = longitudes;
         eLat.value = latitudes;
-        alert(longitudes);
-        alert(latitudes);
+        //alert(longitudes);
+        //alert(latitudes);
         console.log("%s %s", longitudes, latitudes);
     }
 
     function onError(error) {
-        alert("wait 1");
+       // alert("wait 1");
         alert('code: ' + error.code + '\n' +
               'message: ' + error.message + '\n');
-        alert("wait");
+        //alert("wait");
     }
 </script>
 
@@ -70,6 +70,7 @@ function check(){
             var eLat = document.getElementById("latitude");
             eLon.style.display = "none";
             eLat.style.display = "none";
+            getCoordinates();
         }
 
     </script>
