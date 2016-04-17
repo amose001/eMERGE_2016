@@ -91,6 +91,11 @@ app.route('/createAccount')
         res.redirect('/createAccount.html')
     });
 
+app.route('/snag2to3')
+    .post(function (req, res) {
+        res.redirect('/snag3.html')
+    });
+
 app.route('/snag2_3')
     .post(function (req, res) {
         res.redirect('/snag3.html')
