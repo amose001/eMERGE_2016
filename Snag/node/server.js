@@ -40,19 +40,23 @@ app.route('/sales')
     var range=req.body.range;
     var datetime=req.body.datetime;
     var stock=req.body.stock;
+    var lat = req.body.lat;
+    var long = req.body.long;
     console.log(codeword);
     console.log(headline);
     console.log(info);
     console.log(range);
     console.log(datetime);
     console.log(stock);
+    console.log(lat);
+    console.log(long);
     var data = {'name':'\''+headline+'\'',
       'codeword':'\''+codeword+'\'',
       'info':'\''+info+'\'',
       'range':'\''+range+'\'',
       'stock':'\''+stock+'\'',
-      'long':'-80.1909090',
-      'lat':'25.7776200',
+      'long':'\''+long+'\'',
+      'lat':'\''+lat+'\'',
       'endTime':'\''+datetime+'\''};
     dbhandler.insertData(data);
     res.redirect('/post2.html');
