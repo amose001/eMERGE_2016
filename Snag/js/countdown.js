@@ -41,8 +41,8 @@ function initializeClock(id, endtime) {
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 
 function getDeadline(x) {
-	return new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+  return new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 }
 
-// second argument must be 
+// second argument must be
 initializeClock('clockdiv', deadline);

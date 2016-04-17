@@ -29,24 +29,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </script>
 
   <script type="text/javascript">
-    function authLogin() {
+  function authLogin() {
 
-      $.get("/login", function(username) {
-        alert("BRO YOUR USERNAME IS: " + username);
-      });
+    $.get("/login", function(username) {
+      alert("BRO YOUR USERNAME IS: " + username);
+    });
 
-      var username = document.getElementById('username').value;
-      alert(username);
-      if(username.length <= 0) {
-        // user login failed
-        alert("login fail");
-      }
-      else {
-        // user login success
-        // hide login/signup button and display username
-        alert("login success");
-      }
+    var username = document.getElementById('username').value;
+    alert(username);
+    if(username.length <= 0) {
+      // user login failed
+      alert("login fail");
     }
+    else {
+      // user login success
+      // hide login/signup button and display username
+      alert("login success");
+    }
+  }
   </script>
 </head>
 <body>
